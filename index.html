@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<script src="swfupload.js"></script>
+</head>
+<body>
+<div>
+<span>hello</span>
+<div id="J_buttonPlaceHolder">
+</div>
+</div>
+</body>
+</html>
+<script>
+
+function fileDialogComplete(numFilesSelected, numFilesQueued) {
+	this.startUpload();
+}
+
+function uploadError(file, errorCode, message) {
+	console.log(errorCode);
+}
+
+var settings = {
+	button_width: "80",
+	button_height: "25",
+	button_cursor : SWFUpload.CURSOR.HAND,
+	button_placeholder_id: "J_buttonPlaceHolder",
+	file_dialog_complete_handler:fileDialogComplete,
+	upload_error_handler : uploadError,
+};
+var swfu = new SWFUpload(settings);
+</script>
