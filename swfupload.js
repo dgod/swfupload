@@ -291,7 +291,7 @@ SWFUpload.prototype.getFlashHTML = function () {
 	style+='padding: '+this.settings.button_text_top_padding+'px '+this.settings.button_text_lef_padding+'px;';
 	style+='cursor:'+(this.settings.button_cursor==-1?"auto":"pointer")+';';
 	style+=this.settings.button_text_style;
-	var s='<button id="'+this.movieName+'" style="'+style+'">'+this.settings.button_text+'</button>';
+	var s='<button type="button" id="'+this.movieName+'" style="'+style+'">'+this.settings.button_text+'</button>';
 
 	s+='<input type="file" style="display:none">';
 	return s;
